@@ -46,17 +46,31 @@
 				"url": "http://104.131.14.215/private/wp-sync-db_1.0.zip"
 			}
 		}
+	}, {
+		"type": "package",
+		"package": {
+			"name": "acf-gallery/acf-gallery",
+			"version": "1.0.",
+			"type": "wordpress-plugin",
+			"dist": {
+				"type": "zip",
+				"url": "http://104.131.14.215/private/acf-gallery.zip"
+			}
+		}
 	}],
 	"require": {
 		"php": ">=5.4",
 		"composer/installers": "~1.0.12",
 		"vlucas/phpdotenv": "~1.0.9",
 		"johnpbloch/wordpress": "4.2.2",
+		"roots/wp-stage-switcher": "1.0.3",
+		"acf-gallery/acf-gallery": "1.0",
 		"wpackagist-plugin/advanced-custom-fields": ">=4.3.8",
 		"wpackagist-plugin/custom-post-type-ui": ">=1.0",
 		"wpackagist-plugin/contact-form-7": ">=4.1.2",
 		"wpackagist-plugin/contact-form-7-honeypot": "~1.6.1",
 		"wpackagist-plugin/contact-form-7-to-database-extension": ">=2.8",
+		"wpackagist-plugin/tinymce-advanced": ">=4.1.9",
 		"wpackagist-plugin/wordpress-seo": ">=1.5",
 		"wpackagist-plugin/widget-logic": ">=0.57",
 		"wpackagist-plugin/wp-mail-smtp": ">=0.9.5",

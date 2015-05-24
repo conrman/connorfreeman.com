@@ -4,8 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d0cb2f48ed86bcdd4563e7913cdd5451",
+    "hash": "9e7a1ffb916183ebeb8141f4e82785b4",
     "packages": [
+        {
+            "name": "acf-gallery/acf-gallery",
+            "version": "1.0.",
+            "dist": {
+                "type": "zip",
+                "url": "http://104.131.14.215/private/acf-gallery.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.21",
@@ -184,6 +195,48 @@
             "time": "2013-09-09 15:04:54"
         },
         {
+            "name": "roots/wp-stage-switcher",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/wp-stage-switcher.git",
+                "reference": "e7f733f7db05b2682cc6d9268a3662b9e8e81ff0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/wp-stage-switcher/zipball/e7f733f7db05b2682cc6d9268a3662b9e8e81ff0",
+                "reference": "e7f733f7db05b2682cc6d9268a3662b9e8e81ff0",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.3.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "Ben Word",
+                    "email": "ben@benword.com",
+                    "homepage": "https://github.com/retlehs"
+                }
+            ],
+            "description": "WordPress plugin that allows you to switch between different environments from the admin bar",
+            "homepage": "http://roots.io/plugin/stage-switcher/",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2014-08-20 00:14:42"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v1.0.9",
             "source": {
@@ -344,6 +397,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/tinymce-advanced",
+            "version": "4.1.9",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/tinymce-advanced/",
+                "reference": "tags/4.1.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.4.1.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
