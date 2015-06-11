@@ -1,14 +1,16 @@
-<header role="banner">
-	<div class="container-fluid">
-		<nav class="navbar" role="navigation">
-			<div class="nav-header">
-				<a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-			</div>
-			<?php
-			if (has_nav_menu('primary_navigation')) :
-				wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']);
-			endif;
-			?>
-		</nav>
+<header class="app-header" role="banner">
+	<div class="app-container container">
+		
+
+		<div class="app-header-title">
+			<h3><?php bloginfo(); ?></h3>
+		</div>
+
+		<!-- 	<nav class="navbar" role="navigation"> -->
+		<!-- 		<div class="nav-header"> -->
+		<!-- 			<a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a> -->
+		<!-- 		</div> -->
+		<!-- 	</nav> -->
+		
 	</div>
 </header>

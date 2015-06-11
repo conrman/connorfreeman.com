@@ -1,10 +1,20 @@
 // Grid system
 .main {
-  @include make-sm-column($main-sm-columns);
-  .sidebar-primary & {
-    @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
-  }
+	@include make-xs-column($main-xs-columns);
+	// @include make-sm-column($main-sm-columns);
+	// @include make-md-column($main-md-columns);
+	// @include make-lg-column($main-lg-columns);
+	.sidebar-primary & {
+		@include make-xs-column($main-xs-columns - $sidebar-xs-columns);
+		// @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+		// @include make-md-column($main-md-columns - $sidebar-md-columns);
+		// @include make-lg-column($main-lg-columns - $sidebar-lg-columns);
+	}
+
 }
 .sidebar {
-  @include make-sm-column($sidebar-sm-columns);
+	@include make-xs-column($sidebar-xs-columns);
+	// @include make-sm-column($sidebar-sm-columns);
+	// @include make-md-column($sidebar-md-columns);
+	// @include make-lg-column($sidebar-lg-columns);
 }

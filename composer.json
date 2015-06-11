@@ -60,6 +60,7 @@
 	}],
 	"require": {
 		"php": ">=5.4",
+		"roots/soil": "3.0.0",
 		"composer/installers": "~1.0.12",
 		"vlucas/phpdotenv": "~1.0.9",
 		"johnpbloch/wordpress": "4.2.2",

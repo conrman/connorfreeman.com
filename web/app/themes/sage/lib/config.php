@@ -11,7 +11,7 @@ add_theme_support('soil-clean-up'); // Enable clean up from Soil
 add_theme_support('soil-nav-walker'); // Enable cleaner nav walker from Soil
 add_theme_support('soil-relative-urls'); // Enable relative URLs from Soil
 add_theme_support('soil-nice-search'); // Enable nice search from Soil
-add_theme_support('soil-jquery-cdn'); // Enable to load jQuery from the Google CDN
+// add_theme_support('soil-jquery-cdn'); // Enable to load jQuery from the Google CDN
 
 /**
  * Configuration values
@@ -27,28 +27,13 @@ if (!defined('DIST_DIR')) {
 	define('DIST_DIR', '/dist/');
 }
 
+// ## Setup Roots Stage Switcher
 $envs = array(
 	'development' => 'http://connorfreeman.dev',
 	'staging' => 'http://stage.connorfreeman.com',
 	'production' => 'http://connorfreeman.com',
 );
 define('ENVIRONMENTS', serialize($envs));
-
-// ## Google Analytics
-// if (defined(GOOGLE_ANALYTICS_ID) && WP_ENV === 'production') {
-// 	function add_google_analytics() {
-// 		return "<script>
-// 					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-// 					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-// 					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-// 					})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-// 					ga('create', '" . GOOGLE_ANALYTICS . "', 'auto');
-// 					ga('send', 'pageview');
-// 				</script>";
-// 	}
-// 	add_action('wp_footer', 'add_google_analytics');
-// }
 
 /**
  * Define which pages shouldn't have the sidebar
@@ -76,7 +61,6 @@ function display_sidebar() {
 			 */
 			[
 				'is_404',
-				'is_front_page',
 				['is_page_template', 'template-custom.php'],
 			]
 		);

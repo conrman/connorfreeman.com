@@ -8,7 +8,8 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
-    "bootstrap-sass-official": "3.3.4"
+    "bootstrap-sass-official": "3.3.4",
+    "bootstrap-material-design": "~0.3.0"
   },
   "overrides": {
     "modernizr": {
@@ -35,6 +36,17 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
       ]
+    },
+    "bootstrap-material-design": {
+    	"main": [
+    		"./sass/material.scss",
+    		"./scripts/material.js",
+    		"./scripts/ripples.js",
+    		"./fonts/Material-Design-Icons.eot",
+    		"./fonts/Material-Design-Icons.svg",
+    		"./fonts/Material-Design-Icons.ttf",
+    		"./fonts/Material-Design-Icons.woff"
+    	]
     }
   }
 }

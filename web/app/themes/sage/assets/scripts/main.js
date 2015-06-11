@@ -10,7 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-(function($) {
+ (function($) {
 
 	// Use this variable to set up the common and page specific functions. If you
 	// rename this variable, you will also need to rename the namespace below.
@@ -19,6 +19,16 @@
 		'common': {
 			init: function() {
 				// JavaScript to be fired on all pages
+				// jQuery.material.init();
+
+				$(window).bind({
+					load: Sage.common.setViewHeight(),
+					resize: Sage.common.setViewHeight()
+				});
+			},
+			setViewHeight: function() {
+				var windowHeight = $(this).height();
+				$('html, body').css('height', windowHeight + 'px');
 			},
 			finalize: function() {
 				// JavaScript to be fired on all pages, after page specific JS is fired
@@ -39,11 +49,6 @@
 				// JavaScript to be fired on the about us page
 			}
 		},
-		'affinityissue': {
-			init: function() {
-				$('.parallax-container').css('height', '100vh');
-			}
-		}
 	};
 
 	// The routing fires all common scripts, followed by the page specific scripts.
