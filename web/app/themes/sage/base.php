@@ -28,9 +28,14 @@ use Roots\Sage\Wrapper;
       			</aside><!-- /.sidebar -->
       		<?php endif; ?>
       		<main class="main" role="main">
-	      		<section class="col-xs-12 col-sm-10">
+      			<section class="col-xs-12 col-sm-10">
       				<?php include Wrapper\template_path(); ?>
       			</section>
+      			<div class="col-sm-2">
+      				<button class="btn btn-fab btn-raised btn-material-red">
+      					<i class="mdi-action-grade"></i>
+      				</button>
+      			</div>
       		</main><!-- /.main -->
       	</div><!-- /.content -->
       </div><!-- /.wrap -->

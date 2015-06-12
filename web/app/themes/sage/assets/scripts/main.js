@@ -40,13 +40,12 @@
 				var pageTitlePos = $pageTitle.offset();
 
 				$('.main').scroll(function() {
-						pageTitlePos = $pageTitle.offset();
-						console.log(pageTitlePos.top/100);
-						console.log($pageTitle);
-						if (pageTitlePos.top > 0) {
-							$pageTitle.css('opacity', pageTitlePos/1000);
-						}
-					});
+					pageTitlePos = $pageTitle.offset();
+					console.log(pageTitlePos.top/100);
+					if ((pageTitlePos.top/1000) > 0) {
+						$pageTitle.css('opacity', pageTitlePos/100);
+					}
+				});
 			},
 			finalize: function() {
 				// JavaScript to be fired on all pages, after page specific JS is fired

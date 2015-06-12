@@ -17,4 +17,15 @@ body {
 		overflow: auto;
 		z-index: 5;
 	}
+
+	main.main > div {
+		padding-top: 15px;
+	}
+
+	main.main .btn-fab {
+		position: fixed;
+		margin-top: 50px;
+		margin-left: 50px;
+		z-index: 100;
+	}
 }
