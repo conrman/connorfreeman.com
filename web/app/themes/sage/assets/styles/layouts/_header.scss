@@ -1,17 +1,17 @@
 .app-header {
-	@extend .shadow-z-2;
+	@extend .shadow-z-1;
 	height: 144px;
 	background: $primary-color;
 	position: relative;
 	z-index: 3;
 
-	.app-header-contact {
-		@extend .col-xs-2;
-		float: right;
-		text-align: right;
-		top: 120px;
-		z-index: 9;
-	}
+	// .app-header-contact {
+	// 	@extend .col-xs-2;
+	// 	float: right;
+	// 	text-align: right;
+	// 	top: 120px;
+	// 	z-index: 9;
+	// }
 
 	.app-header-title {
 		@extend .col-xs-3;

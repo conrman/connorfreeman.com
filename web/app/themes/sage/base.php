@@ -27,12 +27,9 @@ use Roots\Sage\Wrapper;
       			</aside><!-- /.sidebar -->
       		<?php endif; ?>
       		<main class="main" role="main">
-      			<div class="col-xs-10">
+      			<section class="col-xs-10">
       				<?php include Wrapper\template_path(); ?>
-      			</div>
-      			<div class="col-xs-2">
-      				<button class="btn btn-fab"><i class="mdi-action-grade"></i><div class="ripple-wrapper"></div></button>
-      			</div>
+      			</section>
       		</main><!-- /.main -->
       	</div><!-- /.content -->
       </div><!-- /.wrap -->

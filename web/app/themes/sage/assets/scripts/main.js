@@ -21,14 +21,18 @@
 				// JavaScript to be fired on all pages
 				// jQuery.material.init();
 
+				function setToWindowHeight() {
+					var wh = $(window).outerHeight();
+					var header_height = $('.app-header').outerHeight();
+
+					$('html, body, main').css('height', wh + 'px');
+					$('.sidebar').css('height', wh - header_height + 'px');
+				}
+
 				$(window).bind({
-					load: Sage.common.setViewHeight(),
-					resize: Sage.common.setViewHeight()
+					load: setToWindowHeight(),
+					resize: setToWindowHeight()
 				});
-			},
-			setViewHeight: function() {
-				var windowHeight = $(this).height();
-				$('html, body').css('height', windowHeight + 'px');
 			},
 			finalize: function() {
 				// JavaScript to be fired on all pages, after page specific JS is fired

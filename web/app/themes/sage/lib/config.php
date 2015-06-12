@@ -61,6 +61,7 @@ function display_sidebar() {
 			 */
 			[
 				'is_404',
+				'is_frontpage',
 				['is_page_template', 'template-custom.php'],
 			]
 		);

@@ -1,5 +1,5 @@
 <header class="app-header" role="banner">
-	<div class="app-container container">
+	<div class="app-container container-fluid">
 		
 
 		<div class="app-header-title">
