@@ -4,11 +4,13 @@
 // bower:scss
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "../../bower_components/bootstrap-material-design/sass/material.scss";
+@import "../../bower_components/animate-sass/_animate.scss";
 // endbower
 
 @import "common/_palette";
 @import "common/_global";
 @import "components/_buttons";
+@import "components/_carousel";
 @import "components/_comments";
 @import "components/_forms";
 @import "components/_grid";

@@ -67,6 +67,7 @@
 		"roots/wp-stage-switcher": "1.0.3",
 		"acf-gallery/acf-gallery": "1.0",
 		"wpackagist-plugin/advanced-custom-fields": ">=4.3.8",
+		"wpackagist-plugin/bootstrap-3-shortcodes": "3.3.6",
 		"wpackagist-plugin/custom-post-type-ui": ">=1.0",
 		"wpackagist-plugin/contact-form-7": ">=4.1.2",
 		"wpackagist-plugin/contact-form-7-honeypot": "~1.6.1",

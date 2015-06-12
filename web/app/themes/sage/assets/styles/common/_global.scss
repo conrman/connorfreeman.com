@@ -1,6 +1,20 @@
+html {
+	overflow: auto;
+}
+
 body {
+	overflow: auto;
 }
 
 .wrap {
 }
 
+@media (min-width: $screen-sm) {	
+	main.main > .sidebar-primary {
+		position: absolute;
+		top: 0;
+		right: 0;
+		overflow: auto;
+		z-index: 5;
+	}
+}

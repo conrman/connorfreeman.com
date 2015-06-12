@@ -21,18 +21,32 @@
 				// JavaScript to be fired on all pages
 				// jQuery.material.init();
 
-				function setToWindowHeight() {
-					var wh = $(window).outerHeight();
-					var header_height = $('.app-header').outerHeight();
-
-					$('html, body, main').css('height', wh + 'px');
-					$('.sidebar').css('height', wh - header_height + 'px');
+				/* * 
+				 *	Set elements to the window height,
+				 *	This makes the scroll event work
+				 */
+				function setToWindowHeight(args) {
+					var wh = $(window).height();
+					// console.log(wh);
+					$(args).css('height', wh + 'px');
 				}
 
 				$(window).bind({
-					load: setToWindowHeight(),
-					resize: setToWindowHeight()
+					load: setToWindowHeight('html, body, main, .sidebar'),
+					resize: setToWindowHeight('html, body, main, .sidebar')
 				});
+
+				var $pageTitle = $('.main > section > .page-header > h1');
+				var pageTitlePos = $pageTitle.offset();
+
+				$('.main').scroll(function() {
+						pageTitlePos = $pageTitle.offset();
+						console.log(pageTitlePos.top/100);
+						console.log($pageTitle);
+						if (pageTitlePos.top > 0) {
+							$pageTitle.css('opacity', pageTitlePos/1000);
+						}
+					});
 			},
 			finalize: function() {
 				// JavaScript to be fired on all pages, after page specific JS is fired

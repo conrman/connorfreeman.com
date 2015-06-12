@@ -9,7 +9,8 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.4",
-    "bootstrap-material-design": "~0.3.0"
+    "bootstrap-material-design": "~0.3.0",
+    "animate-sass": "0.6.2"
   },
   "overrides": {
     "modernizr": {
@@ -38,15 +39,23 @@
       ]
     },
     "bootstrap-material-design": {
-    	"main": [
-    		"./sass/material.scss",
-    		"./scripts/material.js",
-    		"./scripts/ripples.js",
-    		"./fonts/Material-Design-Icons.eot",
-    		"./fonts/Material-Design-Icons.svg",
-    		"./fonts/Material-Design-Icons.ttf",
-    		"./fonts/Material-Design-Icons.woff"
-    	]
+      "main": [
+        "./sass/material.scss",
+        "./scripts/material.js",
+        "./scripts/ripples.js",
+        "./fonts/Material-Design-Icons.eot",
+        "./fonts/Material-Design-Icons.svg",
+        "./fonts/Material-Design-Icons.ttf",
+        "./fonts/Material-Design-Icons.woff",
+        "./fonts/RobotoDraftBold.woff",
+        "./fonts/RobotoDraftBold.woff2",
+        "./fonts/RobotoDraftItalic.woff",
+        "./fonts/RobotoDraftItalic.woff2",
+        "./fonts/RobotoDraftMedium.woff",
+        "./fonts/RobotoDraftMedium.woff2",
+        "./fonts/RobotoDraftRegular.woff",
+        "./fonts/RobotoDraftRegular.woff2"
+      ]
     }
   }
 }

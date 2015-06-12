@@ -18,6 +18,7 @@ use Roots\Sage\Wrapper;
       <?php
       do_action('get_header');
       get_template_part('templates/header');
+      get_template_part('templates/carousel');
       ?>
       <div class="wrap container-fluid" role="document">
       	<div class="content row">
@@ -27,7 +28,7 @@ use Roots\Sage\Wrapper;
       			</aside><!-- /.sidebar -->
       		<?php endif; ?>
       		<main class="main" role="main">
-      			<section class="col-xs-10">
+	      		<section class="col-xs-12 col-sm-10">
       				<?php include Wrapper\template_path(); ?>
       			</section>
       		</main><!-- /.main -->
