@@ -73,6 +73,7 @@ function assets() {
 	}
 
 	wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
+	wp_enqueue_script('angular', asset_path('scripts/angular.js'), [], null, true);
 	wp_enqueue_script('material_js', asset_path('scripts/material.js'), ['jquery'], null, true);
 	wp_enqueue_script('sage_js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }

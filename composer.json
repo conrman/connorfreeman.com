@@ -73,10 +73,11 @@
 		"wpackagist-plugin/contact-form-7-honeypot": "~1.6.1",
 		"wpackagist-plugin/contact-form-7-to-database-extension": ">=2.8",
 		"wpackagist-plugin/tinymce-advanced": ">=4.1.9",
+		"wpackagist-plugin/w3-total-cache": ">=0.9.4.1",
 		"wpackagist-plugin/wordpress-seo": ">=1.5",
 		"wpackagist-plugin/widget-logic": ">=0.57",
 		"wpackagist-plugin/wp-mail-smtp": ">=0.9.5",
-		"wpackagist-plugin/w3-total-cache": ">=0.9.4.1",
+		"wpackagist-plugin/json-rest-api": "1.2.2",
 		"wp-sync-db/wp-sync-db": "*"
 	},
 	"extra": {

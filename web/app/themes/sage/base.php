@@ -6,7 +6,7 @@ use Roots\Sage\Wrapper;
 ?>
 
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?> ng-app="Site">
 <?php get_template_part('templates/head'); ?>
 <body <?php body_class(); ?>>
     <!--[if lt IE 9]>
@@ -31,11 +31,13 @@ use Roots\Sage\Wrapper;
       			<section class="col-xs-12 col-sm-10">
       				<?php include Wrapper\template_path(); ?>
       			</section>
-      			<div class="col-sm-2">
-      				<button class="btn btn-fab btn-raised btn-material-red">
-      					<i class="mdi-action-grade"></i>
-      				</button>
-      			</div>
+      			<?php if (Config\display_mainfab()) : ?>
+      				<div class="col-sm-2">
+      					<button class="btn btn-fab btn-raised btn-material-red">
+      						<i class="mdi-action-grade"></i>
+      					</button>
+      				</div>
+      			<?php endif; ?>
       		</main><!-- /.main -->
       	</div><!-- /.content -->
       </div><!-- /.wrap -->

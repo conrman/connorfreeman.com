@@ -22,6 +22,9 @@
 		},
 		"material.js": {
 			"bower": ["bootstrap-material-design"]
+		},
+		"angular.js": {
+			"bower": ["angular"]
 		}
 	},
 	"config": {

@@ -15,15 +15,13 @@
 	// Use this variable to set up the common and page specific functions. If you
 	// rename this variable, you will also need to rename the namespace below.
 	var Sage = {
-		// All pages
 		'common': {
 			init: function() {
-				// JavaScript to be fired on all pages
 				// jQuery.material.init();
 
 				/* * 
 				 *	Set elements to the window height,
-				 *	This makes the scroll event work
+				 *	this makes the scroll event work
 				 */
 				function setToWindowHeight(args) {
 					var wh = $(window).height();
@@ -36,34 +34,34 @@
 					resize: setToWindowHeight('html, body, main, .sidebar')
 				});
 
+				// TODO turn this REPL code in functional code
+				// Read in vars
 				var $pageTitle = $('.main > section > .page-header > h1');
 				var pageTitlePos = $pageTitle.offset();
 
+				// Loop through the scroll event
 				$('.main').scroll(function() {
 					pageTitlePos = $pageTitle.offset();
-					console.log(pageTitlePos.top/100);
+					console.log(pageTitlePos/100);
+					// Evaluate the position
 					if ((pageTitlePos.top/1000) > 0) {
-						$pageTitle.css('opacity', pageTitlePos/100);
+						$pageTitle.css('opacity', pageTitlePos/100); // Put in the new opacity
 					}
 				});
+
 			},
 			finalize: function() {
-				// JavaScript to be fired on all pages, after page specific JS is fired
 			}
 		},
 		// Home page
 		'home': {
 			init: function() {
-				// JavaScript to be fired on the home page
 			},
 			finalize: function() {
-				// JavaScript to be fired on the home page, after the init JS
 			}
 		},
-		// About us page, note the change from about-us to about_us.
 		'about_us': {
 			init: function() {
-				// JavaScript to be fired on the about us page
 			}
 		},
 	};
@@ -100,5 +98,13 @@
 
 	// Load Events
 	$(document).ready(UTIL.loadEvents);
+
+
+	/* * *
+	 *	Angular
+	 */
+
+	var app = angular.module('Site', []);
+
 
 })(jQuery); // Fully reference jQuery after this point.

@@ -71,3 +71,18 @@ function display_sidebar() {
 
 	return $display;
 }
+
+function display_mainfab() {
+	static $display;
+
+	if(!isset($display)) {
+		$conditionalCheck = new ConditionalTagCheck(
+			[
+				'is_404'
+			]
+		);
+		$display = apply_filters('sage/display_mainfab', $conditionalCheck->result);
+	}
+
+	return $display;
+}
