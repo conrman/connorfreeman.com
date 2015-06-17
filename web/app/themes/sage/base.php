@@ -27,9 +27,10 @@ use Roots\Sage\Wrapper;
       				<?php include Wrapper\sidebar_path(); ?>
       			</aside><!-- /.sidebar -->
       		<?php endif; ?>
-      		<main class="main" role="main">
+      		<main class="main" role="main" ng-controller="Content">
       			<section class="col-xs-12 col-sm-10">
-      				<?php include Wrapper\template_path(); ?>
+      				<?php #include Wrapper\template_path(); ?>
+      				<div ng-view></div>
       			</section>
       			<?php if (Config\display_mainfab()) : ?>
       				<div class="col-sm-2">

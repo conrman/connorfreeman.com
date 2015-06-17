@@ -25,6 +25,9 @@
 		},
 		"angular.js": {
 			"bower": ["angular"]
+		},
+		"angular-route.js": {
+			"bower": ["angular-route"]
 		}
 	},
 	"config": {

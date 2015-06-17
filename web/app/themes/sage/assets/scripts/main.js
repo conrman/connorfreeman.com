@@ -10,14 +10,13 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
- (function($) {
+(function($) {
 
 	// Use this variable to set up the common and page specific functions. If you
 	// rename this variable, you will also need to rename the namespace below.
 	var Sage = {
 		'common': {
 			init: function() {
-				// jQuery.material.init();
 
 				/* * 
 				 *	Set elements to the window height,
@@ -25,7 +24,6 @@
 				 */
 				function setToWindowHeight(args) {
 					var wh = $(window).height();
-					// console.log(wh);
 					$(args).css('height', wh + 'px');
 				}
 
@@ -42,28 +40,20 @@
 				// Loop through the scroll event
 				$('.main').scroll(function() {
 					pageTitlePos = $pageTitle.offset();
-					console.log(pageTitlePos/100);
+					console.log(pageTitlePos);
 					// Evaluate the position
-					if ((pageTitlePos.top/1000) > 0) {
-						$pageTitle.css('opacity', pageTitlePos/100); // Put in the new opacity
+					if ((pageTitlePos.top / 1000) > 0) {
+						$pageTitle.css('opacity', pageTitlePos / 100); // Put in the new opacity
 					}
 				});
 
 			},
-			finalize: function() {
-			}
+			finalize: function() {}
 		},
-		// Home page
 		'home': {
-			init: function() {
-			},
-			finalize: function() {
-			}
-		},
-		'about_us': {
-			init: function() {
-			}
-		},
+			init: function() {},
+			finalize: function() {}
+		}
 	};
 
 	// The routing fires all common scripts, followed by the page specific scripts.
@@ -98,13 +88,30 @@
 
 	// Load Events
 	$(document).ready(UTIL.loadEvents);
+	// $.material.init();
 
 
 	/* * *
 	 *	Angular
 	 */
 
-	var app = angular.module('Site', []);
+	var app = angular.module('Site', ['ngRoute'])
+		.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+			// console.log($locationProvider);
+
+			$routeProvider
+				.when('/', {
+					templateUrl: sageLocalized.partials + 'content.php',
+					controller: 'Content'
+				});
+			// $locationProvider.html5Mode(true);
+		}])
+		.controller('Content', ['$http', '$scope', '$routeParams', function($http, $scope, $routeParams) {
+			$http.get('/wp-json/posts/').success(function(res) {
+				console.log(res);
+				$scope.post = res[0];
+			});
+		}]);
 
 
 })(jQuery); // Fully reference jQuery after this point.
