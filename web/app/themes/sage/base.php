@@ -29,8 +29,8 @@ use Roots\Sage\Wrapper;
       		<?php endif; ?>
       		<main class="main" role="main" ng-controller="Content">
       			<section class="col-xs-12 col-sm-10">
-      				<?php #include Wrapper\template_path(); ?>
       				<div ng-view></div>
+      				<?php #include Wrapper\template_path(); ?>
       			</section>
       			<?php if (Config\display_mainfab()) : ?>
       				<div class="col-sm-2">

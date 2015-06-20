@@ -38,14 +38,14 @@
 				var pageTitlePos = $pageTitle.offset();
 
 				// Loop through the scroll event
-				$('.main').scroll(function() {
-					pageTitlePos = $pageTitle.offset();
-					console.log(pageTitlePos);
-					// Evaluate the position
-					if ((pageTitlePos.top / 1000) > 0) {
-						$pageTitle.css('opacity', pageTitlePos / 100); // Put in the new opacity
-					}
-				});
+				// $('.main').scroll(function() {
+				// 	pageTitlePos = $pageTitle.offset();
+				// 	console.log(pageTitlePos);
+				// 	// Evaluate the position
+				// 	if ((pageTitlePos.top / 1000) > 0) {
+				// 		$pageTitle.css('opacity', pageTitlePos / 100); // Put in the new opacity
+				// 	}
+				// });
 
 			},
 			finalize: function() {}
@@ -91,27 +91,29 @@
 	// $.material.init();
 
 
-	/* * *
-	 *	Angular
-	 */
-
-	var app = angular.module('Site', ['ngRoute'])
-		.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-			// console.log($locationProvider);
-
-			$routeProvider
-				.when('/', {
-					templateUrl: sageLocalized.partials + 'content.php',
-					controller: 'Content'
-				});
-			// $locationProvider.html5Mode(true);
-		}])
-		.controller('Content', ['$http', '$scope', '$routeParams', function($http, $scope, $routeParams) {
-			$http.get('/wp-json/posts/').success(function(res) {
-				console.log(res);
-				$scope.post = res[0];
-			});
-		}]);
-
-
 })(jQuery); // Fully reference jQuery after this point.
+
+
+/* * *
+ *	Angular
+ */
+// (function() {
+// 	angular
+// 		.module('Site', [
+// 			'ngRoute'
+// 		])
+// 		.config(['$routeProvider', '$locationProvider', '$sceProvider', function($routeProvider, $locationProvider, $sceProvider) {
+// 			$routeProvider
+// 				.when('/:slug', {
+// 					templateUrl: sageLocalized.partials + 'content.html',
+// 					controller: 'Content'
+// 				});
+
+//                      $sceProvider.enabled(false); // global override
+// 		}])
+// 		.controller('Content', ['$http', '$scope', '$routeParams', function($http, $scope, $routeParams) {
+// 			$http.get('posts/?filter[name]=' + $routeParams.slug).success(function(res) {
+// 				$scope.post = res[0];
+// 			});
+// 		}]);
+// })();
