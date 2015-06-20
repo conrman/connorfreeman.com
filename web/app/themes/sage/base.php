@@ -6,7 +6,7 @@ use Roots\Sage\Wrapper;
 ?>
 
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?> ng-app="Site">
+<html class="no-js" <?php language_attributes(); ?>>
 <?php get_template_part('templates/head'); ?>
 <body <?php body_class(); ?>>
     <!--[if lt IE 9]>
@@ -27,10 +27,9 @@ use Roots\Sage\Wrapper;
       				<?php include Wrapper\sidebar_path(); ?>
       			</aside><!-- /.sidebar -->
       		<?php endif; ?>
-      		<main class="main" role="main" ng-controller="Content">
+      		<main class="main" role="main">
       			<section class="col-xs-12 col-sm-10">
-      				<div ng-view></div>
-      				<?php #include Wrapper\template_path(); ?>
+      				<?php include Wrapper\template_path(); ?>
       			</section>
       			<?php if (Config\display_mainfab()) : ?>
       				<div class="col-sm-2">

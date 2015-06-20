@@ -23,15 +23,9 @@
 		"material.js": {
 			"bower": ["bootstrap-material-design"]
 		},
-		// "angular.js": {
-		// 	"bower": ["angular"]
-		// },
-		// "angular-route.js": {
-		// 	"bower": ["angular-route"]
-		// },
-		// "angular-sanitize.js": {
-		// 	"bower": ["angular-sanitize"]
-		// }
+		"ripples.js": {
+			"bower:": ["bootstrap-material-design"]
+		}
 	},
 	"config": {
 		"devUrl": "http://connorfreeman.dev"
