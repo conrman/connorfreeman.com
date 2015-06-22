@@ -20,6 +20,7 @@
 
 				/* * 
 				 *	Set elements to the window height,
+				 * 	there is an overflow:auto on the .main area
 				 *	this makes the scroll event work
 				 */
 				function setToWindowHeight(args) {
