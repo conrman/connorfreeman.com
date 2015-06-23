@@ -6,7 +6,27 @@ body {
 	overflow: auto;
 }
 
-.wrap {
+.no-pad {
+	padding: 0;
+}
+
+// The button always next to the main content
+.main section + div > .btn-fab {
+	&:focus, &:active, &:visited { color: #fff; }
+}
+
+.main {
+	.sidebar-primary & {
+		padding-bottom: $app-header-height/3;
+
+		> section {
+			@extend .shadow-z-2;
+			background: #fff;
+
+			> article {
+			}
+		}
+	}
 }
 
 @media (min-width: $screen-sm) {	
@@ -18,14 +38,31 @@ body {
 		z-index: 5;
 	}
 
-	main.main > div {
+	main.main > section {
 		padding-top: 15px;
 	}
 
-	main.main .btn-fab {
+	main.main section + div > .btn-fab {
 		position: fixed;
-		margin-top: 50px;
+		margin-top: $app-header-height/2;
 		margin-left: 50px;
 		z-index: 100;
 	}
 }
+
+@media (max-width: $screen-md) {
+	main.main section + div > .btn-fab {
+		margin-left: 30px;
+	}
+}
+
+/* * *
+ * 	Helpers
+ */
+
+ .inline {
+ 	display: inline;
+ }
+ .inline-block {
+ 	display: inline-block;
+ }

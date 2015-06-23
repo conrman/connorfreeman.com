@@ -33,7 +33,7 @@ use Roots\Sage\Wrapper;
       			</section>
       			<?php if (Config\display_mainfab()) : ?>
       				<div class="col-sm-2">
-      					<button class="btn btn-fab btn-raised btn-material-red">
+      					<button id="app-fab" class="btn btn-fab btn-raised btn-material-red animate fadeIn">
       						<i class="mdi-action-grade"></i>
       					</button>
       				</div>

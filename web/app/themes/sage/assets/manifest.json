@@ -20,11 +20,29 @@
 		"modernizr.js": {
 			"bower": ["modernizr"]
 		},
+		"d3.js": {
+			"bower": ["d3"]
+		},
+		"canvg.js": {
+			"bower": ["canvg"]
+		},
+		"rgbcolor.js": {
+			"files": [
+				"scripts/rgbcolor.js"
+			],
+			"main": true
+		},
+		"trigons.js": {
+			"files": [
+				"scripts/trigons.js"
+			],
+			"main": true
+		},
 		"material.js": {
 			"bower": ["bootstrap-material-design"]
 		},
 		"ripples.js": {
-			"bower:": ["bootstrap-material-design"]
+			"bower": ["bootstrap-material-design"]
 		}
 	},
 	"config": {

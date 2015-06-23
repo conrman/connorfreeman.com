@@ -21,7 +21,7 @@
 				/* * 
 				 *	Set elements to the window height,
 				 * 	there is an overflow:auto on the .main area
-				 *	this makes the scroll event work
+				 *	this makes the scroll trick work
 				 */
 				function setToWindowHeight(args) {
 					var wh = $(window).height();
@@ -33,26 +33,42 @@
 					resize: setToWindowHeight('html, body, main, .sidebar')
 				});
 
-				// TODO turn this REPL code in functional code
-				// Read in vars
-				var $pageTitle = $('.main > section > .page-header > h1');
-				var pageTitlePos = $pageTitle.offset();
+				var $appHeader = $('.app-header'),
+					$appSidebar = $('.sidebar'),
+					$appContent = $('.content .main');
 
-				// Loop through the scroll event
+			},
+			finalize: function() {
+
+				/* * *
+				 *	Fade Page Header on Scroll
+				 *	@todo turn this REPL code in functional code
+				 *	Read in vars
+				 */
+				// var $pageTitle = $('div.page-header:first-of-type > h1'),
+				// 	pageTitleOffset = $pageTitle.offset(),
+				// 	originalPosition = pageTitleOffset.top;
+
+				// // Loop through the scroll event
 				// $('.main').scroll(function() {
-				// 	pageTitlePos = $pageTitle.offset();
-				// 	console.log(pageTitlePos);
+				// 	pageTitleOffset = $pageTitle.offset();
 				// 	// Evaluate the position
-				// 	if ((pageTitlePos.top / 1000) > 0) {
-				// 		$pageTitle.css('opacity', pageTitlePos / 100); // Put in the new opacity
+				// 	if (pageTitleOffset.top / 1000 > 0) {
+				// 		var opacity = pageTitleOffset.top * 0.005;
+				// 		if (pageTitleOffset.top < originalPosition) {
+				// 			$pageTitle.css('opacity', opacity); // Put in the new opacity
+				// 		} else {
+				// 			$pageTitle.css('opacity', 1);
+				// 		}
 				// 	}
 				// });
 
-			},
-			finalize: function() {}
+			}
 		},
 		'home': {
-			init: function() {},
+			init: function() {
+
+			},
 			finalize: function() {}
 		}
 	};

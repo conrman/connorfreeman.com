@@ -4,6 +4,8 @@
 
 	.sidebar-primary & {
 		@include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+		padding-top: $app-header-height/3;
+		padding-bottom: $app-header-height/3;
 
 		@media (min-width: $screen-sm) {	
 			position: absolute;
@@ -11,16 +13,6 @@
 			right: 0;
 			overflow: auto;
 			z-index: 5;
-		}
-		padding-top: 46px;
-		padding-bottom: 46px;
-
-		> section {
-			@extend .shadow-z-2;
-			background: #fff;
-
-			> article {
-			}
 		}
 	}
 

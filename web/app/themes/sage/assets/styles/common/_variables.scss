@@ -1,13 +1,20 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
 
 
 // Glyphicons font path
 $icon-font-path:        "../fonts/";
 // Fonts
-$font-family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "RobotoDraft", Helvetica, Arial, sans-serif !important;
+$headings-font-family: $font-family-sans-serif;
+
+// App Header
+$app-header-height: 164px;
 
 // Grid settings
 $main-sm-columns:       12;
 $sidebar-sm-columns:    3;
 
+// Page Header
 $page-header-border-color: transparent;
+
+// Navigation
+$nav-link-hover-bg:	transparent;

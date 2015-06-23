@@ -1,31 +1,43 @@
 .app-header {
 	@extend .shadow-z-1;
-	height: 144px;
+	height: $app-header-height;
 	background: $primary-color;
 	position: relative;
 	z-index: 3;
 
-	// .app-header-contact {
-	// 	@extend .col-xs-2;
-	// 	float: right;
-	// 	text-align: right;
-	// 	top: 120px;
-	// 	z-index: 9;
-	// }
-
-	.app-header-title {
-		@extend .col-xs-3;
-	}
-
-	div {
-		position: relative;
-		height: 100%;
-	}
 }
 
-nav {
-	&.navbar {
-		background: inherit;
-	}
+.app-profile-image {
+	width: 80px;
+	margin: 10px auto 8px;
+	display: block;
 }
 
+.app-header-title {
+	color: #000;
+	font-weight: 700;
+
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+
+	@media (max-width: $screen-md) {
+		font-size: 18px;
+	}
+
+}
+
+/* * *
+ *	Primary Menu
+ */
+
+ .primary-menu {
+
+ 	.nav {
+ 		display: flex;
+ 		flex-direction: row;
+ 		flex-grow: 1;
+ 		justify-content: center;
+ 	}
+
+ }

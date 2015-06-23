@@ -16,6 +16,7 @@ $sage_includes = [
   'lib/conditional-tag-check.php',	// ConditionalTagCheck class
   'lib/config.php',                			// Configuration
   'lib/custom-fields.php',     			// Custom Fields Configuration
+  'lib/nav.php',     					// Navigation Configuration
   'lib/assets.php',                			// Scripts and stylesheets
   'lib/titles.php',                			// Page titles
   'lib/extras.php',                			// Custom functions
