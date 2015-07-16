@@ -1,4 +1,4 @@
-<?php
+<?
 
 use Roots\Sage\Config;
 use Roots\Sage\Wrapper;
@@ -6,45 +6,45 @@ use Roots\Sage\Wrapper;
 ?>
 
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
-<?php get_template_part('templates/head'); ?>
-<body <?php body_class(); ?>>
+<html class="no-js" <? language_attributes(); ?>>
+<? get_template_part('templates/head'); ?>
+<body <? body_class(); ?>>
     <!--[if lt IE 9]>
       <div class="alert alert-warning">
-        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
+        <? _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
       </div>
       <![endif]-->
 
-      <?php
-      do_action('get_header');
-      get_template_part('templates/header');
-      get_template_part('templates/carousel');
-      ?>
-      <div class="wrap container-fluid" role="document">
-      	<div class="content row">
-      		<?php if (Config\display_sidebar()) : ?>
-      			<aside class="sidebar" role="complementary">
-      				<?php include Wrapper\sidebar_path(); ?>
-      			</aside><!-- /.sidebar -->
-      		<?php endif; ?>
-      		<main class="main" role="main">
-      			<section class="col-xs-12 col-sm-10">
-      				<?php include Wrapper\template_path(); ?>
-      			</section>
-      			<?php if (Config\display_mainfab()) : ?>
-      				<div class="col-sm-2">
-      					<button id="app-fab" class="btn btn-fab btn-raised btn-material-red animate fadeIn">
-      						<i class="mdi-action-grade"></i>
-      					</button>
-      				</div>
-      			<?php endif; ?>
-      		</main><!-- /.main -->
-      	</div><!-- /.content -->
-      </div><!-- /.wrap -->
-      <?php
-      do_action('get_footer');
-      get_template_part('templates/footer');
-      wp_footer();
-      ?>
-    </body>
-    </html>
+      <div class="wrapper-layout">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+          <?
+          do_action('get_header');
+          get_template_part('templates/header');
+          ?>
+
+          <main class="mdl-layout__content">
+            <div class="page-content mdl-grid">
+              <? if (Config\display_sidebar()): ?>
+              <section class="page-content__section mdl-cell mdl-cell--9-col">
+                  <? include Wrapper\template_path(); ?>
+              </section>
+              <aside class="page-content__sidebar mdl-cell mdl-cell--3-col" role="complementary">
+                <? include Wrapper\sidebar_path();?>
+              </aside>
+              <? else : ?>
+              <section class="page-content__section mdl-cell mdl-cell--12-col">
+                  <? include Wrapper\template_path(); ?>
+              </section>
+              <? endif; ?>
+            </div>
+          </main>
+          <?
+          do_action('get_footer');
+          get_template_part('templates/footer');
+          wp_footer();
+          ?>
+        </div>
+      </div>
+  </body>
+</html>

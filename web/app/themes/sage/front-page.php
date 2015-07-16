@@ -1,5 +1,3 @@
-<div class="jumbotron">
-	<div class="container-fluid">
-		<h1>Hello World</h1>
-	</div>
-</div>
+<? if (have_posts()) : while(have_posts()) : the_post(); ?>
+  <? get_template_part('templates/content', ''); ?>
+<? endwhile; endif; ?>

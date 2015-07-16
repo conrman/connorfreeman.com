@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "62f568afe8fc273ad529aefe25f1b76d",
+    "hash": "b3e37e18aaa469222fb35eddcc8f74de",
     "packages": [
         {
             "name": "acf-gallery/acf-gallery",
@@ -344,6 +344,17 @@
             "type": "wordpress-plugin"
         },
         {
+            "name": "wp-sync-media/wp-sync-media",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "http://104.131.14.215/private/wp-sync-db-media-files.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "wpackagist-plugin/advanced-custom-fields",
             "version": "4.4.2",
             "source": {
@@ -364,36 +375,16 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
-            "name": "wpackagist-plugin/bootstrap-3-shortcodes",
-            "version": "3.3.6",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/bootstrap-3-shortcodes/",
-                "reference": "tags/3.3.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/bootstrap-3-shortcodes.3.3.6.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/bootstrap-3-shortcodes/"
-        },
-        {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "4.2",
+            "version": "4.2.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/4.2"
+                "reference": "tags/4.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -425,15 +416,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7-to-database-extension",
-            "version": "2.9.2",
+            "version": "2.9.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/contact-form-7-to-database-extension/",
-                "reference": "tags/2.9.2"
+                "reference": "tags/2.9.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7-to-database-extension.2.9.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7-to-database-extension.2.9.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -445,15 +436,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.1.0"
+                "reference": "tags/1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.1.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.1.1.zip",
                 "reference": null,
                 "shasum": null
             },

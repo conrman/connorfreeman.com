@@ -37,12 +37,6 @@
 				"scripts/trigons.js"
 			],
 			"main": true
-		},
-		"material.js": {
-			"bower": ["bootstrap-material-design"]
-		},
-		"ripples.js": {
-			"bower": ["bootstrap-material-design"]
 		}
 	},
 	"config": {

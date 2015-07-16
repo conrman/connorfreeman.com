@@ -24,8 +24,12 @@
 				 *	this makes the scroll trick work
 				 */
 				function setToWindowHeight(args) {
-					var wh = $(window).height();
-					$(args).css('height', wh + 'px');
+					var wh = $(window).height(),
+						ch = $('.main').height();
+
+					if (ch < wh) {
+						$(args).css('height', wh + 'px');
+					}
 				}
 
 				$(window).bind({
@@ -37,9 +41,21 @@
 					$appSidebar = $('.sidebar'),
 					$appContent = $('.content .main');
 
+				// d3.selectAll('.app-header')
+				// 	.trigons({
+				// 		colors: '#8BC34A, #689F38, #DCEDC8',
+				// 		width: 1440,
+				// 		height: 164
+				// 	})
+				// 	.trigonsAnimInit({
+				// 		animIn: 'effect1-top',
+				// 		durationIn: 2000,
+				// 		easyIn: 'cubic-out',
+				// 	}).trigonsBackground();
+
 			},
 			finalize: function() {
-
+				
 				/* * *
 				 *	Fade Page Header on Scroll
 				 *	@todo turn this REPL code in functional code

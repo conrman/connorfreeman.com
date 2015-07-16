@@ -38,6 +38,17 @@
 	}, {
 		"type": "package",
 		"package": {
+			"name": "wp-sync-media/wp-sync-media",
+			"version": "1.0",
+			"type": "wordpress-plugin",
+			"dist": {
+				"type": "zip",
+				"url": "http://104.131.14.215/private/wp-sync-db-media-files.zip"
+			}
+		}
+	}, {
+		"type": "package",
+		"package": {
 			"name": "wp-sync-db/wp-sync-db",
 			"version": "1.0.",
 			"type": "wordpress-plugin",
@@ -67,7 +78,6 @@
 		"roots/wp-stage-switcher": "1.0.3",
 		"acf-gallery/acf-gallery": "1.0",
 		"wpackagist-plugin/advanced-custom-fields": ">=4.3.8",
-		"wpackagist-plugin/bootstrap-3-shortcodes": "3.3.6",
 		"wpackagist-plugin/custom-post-type-ui": ">=1.0",
 		"wpackagist-plugin/contact-form-7": ">=4.1.2",
 		"wpackagist-plugin/contact-form-7-honeypot": "~1.6.1",
@@ -78,6 +88,7 @@
 		"wpackagist-plugin/widget-logic": ">=0.57",
 		"wpackagist-plugin/wp-mail-smtp": ">=0.9.5",
 		"wpackagist-plugin/json-rest-api": "1.2.2",
+		"wp-sync-media/wp-sync-media": "*",
 		"wp-sync-db/wp-sync-db": "*"
 	},
 	"extra": {

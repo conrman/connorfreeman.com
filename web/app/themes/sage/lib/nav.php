@@ -1,16 +1,6 @@
 <?php
 
-/**
- * Class Name: wp_bootstrap_navwalker
- * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
- * Description: A custom WordPress nav walker class to implement the Bootstrap 3 navigation style in a custom theme using the WordPress built in menu manager.
- * Version: 2.0.4
- * Author: Edward McIntyre - @twittem
- * License: GPL-2.0+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- */
-
-class wp_bootstrap_navwalker extends Walker_Nav_Menu {
+class wp_mdl_navwalker extends Walker_Nav_Menu {
 
 	/**
 	 * @see Walker::start_lvl()
@@ -73,7 +63,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 			$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-			$output .= $indent . '<li' . $id . $value . $class_names .'>';
+			// $output .= $indent . '<li' . $id . $value . $class_names .'>';
 
 			$atts = array();
 			$atts['title']  = ! empty( $item->title )	? $item->title	: '';
@@ -90,6 +80,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '';
 			}
 
+			$atts['class'] = 'mdl-navigation__link';
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 
 			$attributes = '';
