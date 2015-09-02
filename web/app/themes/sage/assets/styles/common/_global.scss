@@ -1,3 +1,56 @@
 /* * *
- *	Global Styles
- */
+*	Global Styles
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,700italic);
+
+html {
+  font-family: "Roboto", sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mdl-layout__header {
+  background: $color-primary;
+}
+.mdl-layout__content {
+  background: whitesmoke;
+}
+.mdl-layout__drawer {
+  background: $color-white;
+  border: none;
+
+  .mdl-layout-title,
+  & .mdl-navigation .mdl-navigation__link {
+    // color: #fff;
+    &.mdl-navigation__link:hover {
+      // background: darken($color-primary, 7%);
+    }
+  }
+}
+.mdl-mega-footer {
+}
+
+.pagination {
+  width: 100%;
+}
+
+pre {
+  display: flex;
+  background: #222;
+  color: #fff;
+  word-wrap: nowrap;
+  padding: {
+    top: .8em;
+    bottom: .8em;
+    left: 1em;
+  }
+  margin: {
+    left: -16px;
+    right: -16px;
+  }
+  @media #{$phone-and-up} { 
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+
+}

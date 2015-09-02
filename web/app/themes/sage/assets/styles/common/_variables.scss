@@ -1,0 +1,17 @@
+$color-grey: rgb(96,125,139);
+$color-blue: rgb(33,150,243);
+$color-green: rgb(139,195,74);
+$color-purple: rgb(156,39,176);
+$color-white: rgb(255,255,255);
+
+$color-primary: $color-blue;
+
+
+// Grid helpers
+$phone-and-up: "(min-width: 480px)";
+$tablet-and-up: "(min-width: 840px)";
+$desktop-and-up: "(min-width: 1280px)";
+
+$phone-and-down: "(max-width: 480px)";
+$tablet-and-down: "(max-width: 840px)";
+$desktop-and-down: "(max-width: 1280px)";

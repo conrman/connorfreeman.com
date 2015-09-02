@@ -1,0 +1,22 @@
+.post {
+  max-width: 1080px;
+  margin: 0 auto 1em;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.mdl-card {
+    .mdl-card__meta {
+      color: lighten(grey, 10%);
+      padding-left: 1em;
+      time {
+        text-transform: uppercase !important;
+      }
+      a {
+        color: $color-primary;
+      }
+    }
+  }
+}

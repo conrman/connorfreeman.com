@@ -1,0 +1,35 @@
+.comments {
+
+  .comment {
+    margin: 4px 0;
+    padding: 15px;
+
+    // Alternate colors
+    @for $i from 1 through 10 {
+      &.depth-#{$i} { 
+        margin-left: 15px; 
+        &.odd { background: lighten(whitesmoke, 1%); }
+        &.even { background: #fff; }
+      }
+    }
+  
+    &-meta {
+      @extend .alignright;
+    }
+
+    &-author,
+    &-text {
+      padding: 10px 0;
+    }
+  }
+
+  .reply {
+    text-align: right;
+  }
+}
+
+.comment-respond {
+  .mdl-textfield {
+    width: 100%;
+  }
+}

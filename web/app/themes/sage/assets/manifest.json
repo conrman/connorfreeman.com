@@ -37,6 +37,9 @@
 				"scripts/trigons.js"
 			],
 			"main": true
+		},
+		"prism.js": {
+			"bower": ["prism"]
 		}
 	},
 	"config": {

@@ -1,0 +1,46 @@
+.page-content {
+	max-width: 1280px;
+}
+
+
+.blog {
+
+	.page-content {
+		.mdl-grid {
+			align-items: baseline;
+			.mdl-cell { flex-basis: calc(50% - 16px);
+				&:first-of-type { flex-basis: calc(100% - 16px); }
+				&.sticky { flex-basis: calc(100% - 16px); }
+			}
+		}
+	}
+
+	article.post.format-gallery {
+		background: $color-purple;
+		&,
+		p,
+		h1 {
+			color: #fff;
+		}
+	}
+}
+
+
+.single-post {
+
+	@media #{$phone-and-down} {
+		.page-content,
+		.page-content .mdl-cell,
+		.page-content .mdl-card {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.mdl-card__title-text {
+		@media #{$tablet-and-up} {
+			font-size: 3.5em !important;
+		}
+	}
+}

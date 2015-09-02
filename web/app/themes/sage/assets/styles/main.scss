@@ -6,14 +6,17 @@
 // endbower
 
 @import "common/_global";
+@import "components/_icons";
 @import "components/_buttons";
 @import "components/_comments";
+@import "components/_card";
 @import "components/_forms";
 @import "components/_grid";
+@import "components/_profile";
 @import "components/_widgets";
 @import "components/_wp-classes";
 @import "layouts/_header";
 @import "layouts/_sidebar";
 @import "layouts/_footer";
-@import "layouts/_pages";
-@import "layouts/_posts";
+@import "layouts/_page";
+@import "layouts/_post";

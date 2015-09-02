@@ -5,7 +5,7 @@ namespace Roots\Sage\Extras;
 use Roots\Sage\Config;
 
 /**
- * Add <body> classes
+ *  Add <body> classes
  */
 function body_class($classes) {
   // Add page slug if it doesn't exist
@@ -25,9 +25,14 @@ function body_class($classes) {
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
 
 /**
- * Clean up the_excerpt()
+ *  Clean up the_excerpt()
  */
 function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+
+/**
+ *  Widget
+ */

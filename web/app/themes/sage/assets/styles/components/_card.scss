@@ -1,0 +1,21 @@
+.mdl-card {
+  width: auto;
+  min-height: 1em;
+  margin-bottom: 1em;
+
+  &__title {
+    &-title {
+    }
+  }
+
+  &__media {
+    &-image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__supporting-text {
+    width: auto;
+  }
+}

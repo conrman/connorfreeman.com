@@ -1,4 +1,7 @@
-.sidebar {
-	position: relative;
-	overflow: auto;
+.page-content__sidebar {
+  
+  &--fixed {
+    position: fixed;
+    width: auto;
+  }
 }

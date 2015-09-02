@@ -27,13 +27,16 @@ if (!defined('DIST_DIR')) {
 	define('DIST_DIR', '/dist/');
 }
 
-// ## Setup Roots Stage Switcher
+/**
+ * Setup Roots Stage Switcher
+ */
 $envs = array(
 	'development' => 'http://connorfreeman.dev',
 	'staging' => 'http://stage.connorfreeman.com',
 	'production' => 'http://connorfreeman.com',
 );
 define('ENVIRONMENTS', serialize($envs));
+
 
 /**
  * Define which pages shouldn't have the sidebar

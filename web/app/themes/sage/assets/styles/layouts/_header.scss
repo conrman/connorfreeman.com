@@ -1,0 +1,15 @@
+.mdl-layout__header {
+  .search-form {
+    @media #{$phone-and-down} {
+      .mdl-js-textfield.is-focused {
+        max-width: 130px;
+      }
+    }
+  }
+}
+.mdl-layout__header-title {
+	font-size: 18px;
+}
+.mdl-layout__header-subtitle {
+	font-size: 24px;
+}
